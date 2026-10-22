@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Selamat Ulang Tahun, qha 🌸</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Dancing+Script:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loader" class="screen"><div class="spin">🌸</div><div class="load-t">Menyiapkan sesuatu yang spesial untukmu...</div></div>
+
+<div id="lock" class="screen hidden">
+  <div class="lock" id="lockbox">
+    <div>🌸</div>
+    <h2 id="lockTitle"></h2><p>Your Birthday 🌸</p>
+    <div class="dots" id="dots"></div>
+    <div class="pad" id="pad"></div>
+  </div>
+</div>
+
+<div id="giftScr" class="screen hidden">
+  <div class="hint">Tap kotak hadiah untuk hadiah 🎀</div>
+  <div class="gift" id="gift">🎁</div>
+</div>
+
+<button class="music" id="mbtn" title="Musik">♫</button>
+
+<main id="main" class="hidden">
+  <section class="hero">
+    <div class="eyebrow">🌸 Your Special Day 🌸</div>
+    <h1>Happy <em>Birthday</em><span id="nm"></span></h1>
+    <div class="date" id="dt"></div>
+    <span class="tap">Tap lilin untuk padamkan! 🎂</span>
+    <div class="cake" id="cake">
+      <div class="candles"><div class="candle"><i class="flame"></i></div><div class="candle"><i class="flame"></i></div><div class="candle"><i class="flame"></i></div></div>
+      <div class="t1"></div><div class="t2"></div><div class="t3"></div><div class="plate"></div>
+    </div>
+    <div class="wish" id="wish"></div>
+  </section>
+
+  <section>
+    <div class="eyebrow">— A Letter For You —</div>
+    <div class="letter"><small id="ld"></small><b id="lh"></b><div id="lb"></div></div>
+  </section>
+
+  <section>
+    <div class="eyebrow">— My First Gift —</div>
+    <h2>Digital Bouquet</h2><div class="sub">Setiap bunga menyimpan pesan kecil untuk awak</div>
+    <div class="bq" id="bq"><div class="pot"></div></div>
+    <div class="quote" id="bqt">tap salah satu bunga 🌼</div>
+  </section>
+
+  <section>
+    <div class="eyebrow">— A Collection of Memories —</div>
+    <h2>the purple girl</h2><div class="sub">Ketuk untuk mengungkap</div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section>
+    <div class="eyebrow">— Our Journey —</div>
+    <h2>Perjalanan kenal awak</h2>
+    <div class="tl" id="tl"></div>
+  </section>
+
+  <section>
+    <div class="eyebrow">— From Music With Love —</div>
+    <h2>Playlist untul awak</h2><div class="sub">Pilih lagu yang ingin kamu dengarkan</div>
+    <div class="player">
+      <div class="eyebrow">Now Playing</div>
+      <div class="disc" id="disc" style="margin-inline:auto"></div>
+      <div class="serif" id="pt" style="font-size:1.3rem"></div><small id="pa" style="color:#c99ab0"></small>
+      <div class="bar" id="bar"><i id="fill"></i></div>
+      <div class="ctl"><button id="prev">⏮</button><button class="pp" id="pp">▶</button><button id="next">⏭</button></div>
+      <div class="list" id="pl"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">— From My Heart To Yours —</div>
+    <h2>Reasons I'm Grateful To Know You</h2><div class="sub">Kocok toples dan ambil sebuah catatan 📝</div>
+    <div class="jar" id="jar"></div>
+    <button class="btn" id="shake">📝 shake toplesnya</button>
+    <div id="out"></div>
+  </section>
+  <footer id="foot"></footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

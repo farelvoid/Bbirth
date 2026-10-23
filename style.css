@@ -126,3 +126,17 @@ footer{padding:50px 20px 90px;text-align:center;font-family:'Dancing Script',cur
 .pop17 .n{font-family:'Playfair Display',serif;font-size:clamp(6rem,30vw,9rem);line-height:1;font-weight:600;background:linear-gradient(135deg,#fff,var(--pink) 50%,var(--hot));-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 22px var(--hot));animation:beat 1.4s ease-in-out infinite}
 @keyframes beat{50%{transform:scale(1.08)}}
 .pop17 small{display:block;margin-top:14px;font-size:.7rem;letter-spacing:.2em;color:#b59ad6}
+
+/* countdown */
+#cdScr{z-index:49}
+.cdh{font-family:'Playfair Display',serif;font-weight:400;font-style:italic;font-size:clamp(2.2rem,10vw,3.4rem);line-height:1.15;margin:6px 0 10px}
+.cdh em{display:block;font-family:'Dancing Script',cursive;font-style:normal;color:var(--pink);text-shadow:0 0 18px var(--hot);font-size:1.15em}
+.cdsub{font-size:.8rem;color:#b59ad6;margin-bottom:30px}
+.cdbox{display:flex;align-items:center;justify-content:center;gap:6px}
+.cb{width:clamp(56px,17vw,74px);padding:14px 0 10px;border-radius:14px;background:rgba(255,255,255,.07);border:1px solid rgba(207,168,247,.25);backdrop-filter:blur(8px);box-shadow:0 0 24px rgba(164,92,240,.25)}
+.cb b{display:block;font-family:'Playfair Display',serif;font-size:clamp(1.5rem,7vw,2rem);font-weight:600;color:#fff;font-variant-numeric:tabular-nums}
+.cb small{display:block;margin-top:4px;font-size:.52rem;letter-spacing:.2em;color:var(--pink)}
+.cc{color:var(--pink);font-size:1.4rem;opacity:.7;margin-bottom:14px;animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:.15}}
+.cdtgl{margin:26px 0 18px;font-size:.7rem;letter-spacing:.3em;color:var(--pink)}
+.cdbtn:disabled{opacity:.55;cursor:not-allowed;background:rgba(255,255,255,.1);color:var(--pink);border:1px solid rgba(207,168,247,.3)}

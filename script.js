@@ -2,7 +2,7 @@
 const CONFIG={
   nama:"qha",
   kode:"241009",            // 6 digit, kode rahasia pembuka
-  tanggal:"october 24",
+  tanggal:"October 24",
   surat:[
     "Di hari yang paling istimewa ini, saya ingin awak tahu bahwa berjumpa dengan awak adalah salah satu hal terbaik yang datang ke hidup saya tahun ni, di bumi yang pelik ni akhirnya saya jumpa dengan awak yang buat saya berpikir (dia ni beda do) camtuu.",
     "Dan terima kasih awak sudah jadi teman yapping saya, dah mau bagi story awak ke saya dan tak annoy dengan saya (sorry kalau annoy). Dan paling penting semoga dengan bertambah nya usia awak malam ni awak jadi pribadi lebih baik,lebih pandai manage emosi awak dari orang orang stress, semoga tahun ini dan tahun tahun berikut nya penuh hal baik buat awak dan semoga SPM straigt A+!!."

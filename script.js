@@ -3,6 +3,7 @@ const CONFIG={
   nama:"qha",
   kode:"241009",            // 6 digit, kode rahasia pembuka
   tanggal:"October 24",
+  waktu:"2026-10-23T22:33:00+08:00",
   surat:[
     "Di hari yang paling istimewa ini, saya ingin awak tahu bahwa berjumpa dengan awak adalah salah satu hal terbaik yang datang ke hidup saya tahun ni, di bumi yang pelik ni akhirnya saya jumpa dengan awak yang buat saya berpikir (dia ni beda do) camtuu.",
     "Dan terima kasih awak sudah jadi teman yapping saya, dah mau bagi story awak ke saya dan tak annoy dengan saya (sorry kalau annoy). Dan paling penting semoga dengan bertambah nya usia awak malam ni awak jadi pribadi lebih baik,lebih pandai manage emosi awak dari orang orang stress, semoga tahun ini dan tahun tahun berikut nya penuh hal baik buat awak dan semoga SPM straigt A+!!."
@@ -79,6 +80,29 @@ function check(){
  if(buf===C.kode){$('#lock').classList.add('fade');setTimeout(()=>{$('#lock').remove();$('#giftScr').classList.remove('hidden')},700)}
  else{const b=$('#lockbox');b.classList.remove('shake');void b.offsetWidth;b.classList.add('shake');buf='';draw()}}
 document.addEventListener('keydown',e=>{if($('#lock')&&!$('#lock').classList.contains('hidden')){if(/\d/.test(e.key))key(e.key);else if(e.key==='Backspace')key('✕');else if(e.key==='Enter')key('↵')}});
+
+// countdown sebelum hadiah terbuka
+function bukaGift(){$('#giftScr').classList.remove('hidden')}
+function lanjut(){
+ const T=new Date(C.waktu).getTime();
+ if(isNaN(T)||Date.now()>=T){bukaGift();return}
+ const el=document.createElement('div');el.id='cdScr';el.className='screen';
+ const tg=new Date(T).toLocaleDateString('id-ID',{day:'numeric',month:'long',year:'numeric',timeZone:'Asia/Kuala_Lumpur'}).toUpperCase();
+ const kotak=['HARI','JAM','MENIT','DETIK'].map((l,i)=>`<div class="cb"><b id="cd${i}">00</b><small>${l}</small></div>`).join('<span class="cc">:</span>');
+ el.innerHTML=`<div class="eyebrow">✦ MENGHITUNG HARI ✦</div>
+  <h1 class="cdh">Hari Spesialmu<em>Sebentar Lagi</em></h1>
+  <p class="cdsub">Sesuatu yang indah sedang menunggu waktunya 💜</p>
+  <div class="cdbox">${kotak}</div>
+  <div class="cdtgl">${tg}</div>
+  <button class="btn cdbtn" disabled>🔒 Belum waktunya</button>`;
+ document.body.append(el);
+ const p2=n=>String(n).padStart(2,'0');
+ function tick(){
+  let d=Math.max(0,T-Date.now());
+  if(d<=0){clearInterval(iv);confetti();el.classList.add('fade');setTimeout(()=>{el.remove();bukaGift()},900);return}
+  const v=[Math.floor(d/864e5),Math.floor(d/36e5)%24,Math.floor(d/6e4)%60,Math.floor(d/1e3)%60];
+  v.forEach((x,i)=>{const b=$('#cd'+i);if(b)b.textContent=p2(x)})}
+ const iv=setInterval(tick,1000);tick()}
 
 // kotak hadiah -> bunga -> halaman utama
 $('#gift').onclick=()=>{

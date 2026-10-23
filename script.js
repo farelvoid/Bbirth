@@ -77,7 +77,7 @@ function key(k){
  else if(buf.length<6){buf+=k;if(buf.length===6)setTimeout(check,150)}
  draw()}
 function check(){
- if(buf===C.kode){$('#lock').classList.add('fade');setTimeout(()=>{$('#lock').remove();$('#giftScr').classList.remove('hidden')},700)}
+ if(buf===C.kode){$('#lock').classList.add('fade');setTimeout(()=>{$('#lock').remove();lanjut()},700)}
  else{const b=$('#lockbox');b.classList.remove('shake');void b.offsetWidth;b.classList.add('shake');buf='';draw()}}
 document.addEventListener('keydown',e=>{if($('#lock')&&!$('#lock').classList.contains('hidden')){if(/\d/.test(e.key))key(e.key);else if(e.key==='Backspace')key('✕');else if(e.key==='Enter')key('↵')}});
 

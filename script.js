@@ -4,8 +4,8 @@ const CONFIG={
   kode:"241009",            // 6 digit, kode rahasia pembuka
   tanggal:"october 24",
   surat:[
-    "Di hari yang paling istimewa ini, saya ingin awak tahu bahwa awak adalah salah satu hal terbaik yang pernah datang ke hidup saya.",
-    "Terima kasih sudah jadi pendengar yapping, sudah sabar, dan sudah selalu ada. Semoga tahun ini penuh hal baik buat awak dan SPM straigt A+."
+    "Di hari yang paling istimewa ini, saya ingin awak tahu bahwa berjumpa dengan awak adalah salah satu hal terbaik yang datang ke hidup saya tahun ni, di bumi yang pelik ni akhirnya saya jumpa dengan awak yang buat saya berpikir (dia ni beda do) camtuu.",
+    "Dan terima kasih awak sudah jadi teman yapping saya, dah mau bagi story awak ke saya dan tak annoy dengan saya (sorry kalau annoy). Dan paling penting semoga dengan bertambah nya usia awak malam ni awak jadi pribadi lebih baik,lebih pandai manage emosi awak dari orang orang stress, semoga tahun ini dan tahun tahun berikut nya penuh hal baik buat awak dan semoga SPM straigt A+!!."
   ],
   bunga:[
     {e:"🌻",t:"Senyummu seperti bunga matahari, selalu menghadap cahaya dan menghangatkan sekitarnya."},
@@ -15,8 +15,8 @@ const CONFIG={
     {e:"💐",t:"Dan semoga semua doamu pelan-pelan jadi nyata."}
   ],
   foto:[ // isi src dengan path foto, contoh "img/1.jpg"
-    {src:"gambar/1.jpeg",judul:"Peace",cap:"qha versi calm."},
-    {src:"gambar/2.jpeg",judul:"Awek cortis",cap:"tak tau nama dia yang penting cortis."},
+    {src:"gambar/6.jpg",judul:"masa awal",cap:"membuktikan bahwa saya asli indon."},
+    {src:"gambar/5.jpg",judul:"Awek cortis",cap:"tak tau nama dia yang penting cortis."},
     {src:"gambar/3.jpeg",judul:"<3",cap:"no cap just beutiful."},
     {src:"gambar/4.jpeg",judul:"Pretty",cap:"Titut."}
   ],

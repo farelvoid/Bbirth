@@ -94,8 +94,12 @@ function confetti(){for(let i=0;i<60;i++){const c=document.createElement('i');c.
  c.style.cssText=`left:${rnd(0,100)}vw;background:hsl(${rnd(0,360)},80%,70%);animation-duration:${rnd(2,4)}s;animation-delay:${rnd(0,.8)}s`;document.body.append(c);setTimeout(()=>c.remove(),5000)}}
 
 // kue
-$('#cake').onclick=()=>{const c=$('#cake');if(!c.classList.contains('off')){c.classList.add('off');confetti();$('.tap').textContent='Semoga semua harapanmu terkabul! ✨'}else{c.classList.remove('off');$('.tap').textContent='Tap lilin untuk meniupnya! 🎂'}};
-
+function tutup17(){const p=$('.pop17');if(!p||p.classList.contains('out'))return;p.classList.add('out');setTimeout(()=>p.remove(),500)}
+function pop17(){if($('.pop17'))return;const p=document.createElement('div');p.className='pop17';
+ let sp='';for(let i=0;i<16;i++)sp+=`<span style="left:${rnd(0,100)}%;top:${rnd(0,100)}%;font-size:${rnd(14,30)}px;animation-delay:${rnd(0,2)}s">${['✨','💜','🪻','✨'][i%4]}</span>`;
+ p.innerHTML=`${sp}<div class="card"><div class="tt">Happy Sweet Seventeen</div><div class="n">17</div><small>Tap untuk menutup</small></div>`;
+ p.onclick=tutup17;document.body.append(p);setTimeout(tutup17,7000)}
+$('#cake').onclick=()=>{const c=$('#cake');if(!c.classList.contains('off')){c.classList.add('off');confetti();setTimeout(pop17,500);$('.tap').textContent='Semoga semua harapanmu terkabul! ✨'}else{c.classList.remove('off');tutup17();$('.tap').textContent='Tap lilin untuk meniupnya! 🎂'}};
 // buket
 const bq=$('#bq'),n=C.bunga.length;
 C.bunga.forEach((f,i)=>{const a=(i/(n-1)-.5)*110*Math.PI/180,x=130+Math.sin(a)*100-27,y=100-Math.cos(a)*70;

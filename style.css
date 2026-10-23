@@ -113,3 +113,16 @@ section>h2{font-size:clamp(1.8rem,5vw,2.6rem)}
 .note small{display:block;margin-top:12px;font-style:normal;letter-spacing:.15em;font-size:.62rem;color:#8d82a8}
 @keyframes up{from{opacity:0;transform:translateY(16px)}}
 footer{padding:50px 20px 90px;text-align:center;font-family:'Dancing Script',cursive;font-size:1.5rem;color:var(--pink)}
+/* popup 17 */
+.pop17{position:fixed;inset:0;z-index:65;display:flex;align-items:center;justify-content:center;background:rgba(18,7,31,.8);backdrop-filter:blur(6px);animation:fin .4s;overflow:hidden;cursor:pointer}
+.pop17.out{animation:fout .5s forwards}
+@keyframes fin{from{opacity:0}}
+@keyframes fout{to{opacity:0}}
+.pop17>span{position:absolute;pointer-events:none;animation:twk 2.4s ease-in-out infinite}
+@keyframes twk{0%,100%{opacity:.15;transform:scale(.6)}50%{opacity:1;transform:scale(1.2) rotate(20deg)}}
+.pop17 .card{position:relative;text-align:center;padding:36px 30px;border-radius:28px;background:rgba(255,255,255,.06);border:1px solid rgba(207,168,247,.35);box-shadow:0 0 60px rgba(164,92,240,.45);animation:zm .9s cubic-bezier(.34,1.56,.64,1)}
+@keyframes zm{from{transform:scale(0) rotate(-12deg);opacity:0}}
+.pop17 .tt{font-family:'Dancing Script',cursive;font-size:clamp(1.8rem,8vw,2.6rem);color:var(--pink);text-shadow:0 0 18px var(--hot)}
+.pop17 .n{font-family:'Playfair Display',serif;font-size:clamp(6rem,30vw,9rem);line-height:1;font-weight:600;background:linear-gradient(135deg,#fff,var(--pink) 50%,var(--hot));-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 22px var(--hot));animation:beat 1.4s ease-in-out infinite}
+@keyframes beat{50%{transform:scale(1.08)}}
+.pop17 small{display:block;margin-top:14px;font-size:.7rem;letter-spacing:.2em;color:#b59ad6}
